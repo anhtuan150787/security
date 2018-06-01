@@ -1,0 +1,64 @@
+<div class="pagehding-sec" style='background-image: url("<?php echo $this->basePath('pictures/templates/' . $template[36]['template_picture']);?>")'>
+    <div class="pagehding-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-heading">
+                    <h1><?php echo $this->escapeHtml($postCategory['category_name_' . $lang]);?></h1>
+                    <?php echo $crum;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-classic-sec pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="media">
+                    <div class="single-post">
+<!--                        <div class="blog-classic-img">-->
+<!--                            <img src="img/news1.jpg" alt="">-->
+<!--                        </div>-->
+                        <div class="media-body">
+                            <div class="single-post-text">
+                                <h2><?php echo $this->escapeHtml($post['post_title_' . $lang]);?></h2>
+                                <?php echo $post['post_body_' . $lang];?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="sidebar">
+                    <?php if (count($postOther) > 0) {?>
+                    <div class="widget-archive">
+                        <h1 style="margin-top: 0; margin-bottom: 20px"><?php echo $this->translate('other news');?></h1>
+                        <ul>
+                            <?php foreach($postOther as $v) {?>
+                                <li><a href="<?php echo $this->url('home-news-detail', array('name' => $this->function()->formatTitle($v['post_title_' . $lang]), 'id' => $v['post_id']));?>"><?php echo $this->escapeHtml($v['post_title_' . $lang]);?></a></li>
+                            <?php }?>
+
+                        </ul>
+                    </div>
+                    <?php }?>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=145168662811769&autoLogAppEvents=1';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="10" width="100%"></div>
+            </div>
+        </div>
+    </div>
+</div>

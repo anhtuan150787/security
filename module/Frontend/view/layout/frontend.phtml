@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://themeearth.com/tf/html/securepress/index.html -->
+<html dir="ltr" lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title><?php echo $websiteGeneral['website_general_title'];?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo $websiteGeneral['website_general_description'];?>">
+    <meta name="keywords" content="<?php echo $websiteGeneral['website_general_keyword'];?>">
+
+    <meta property="og:url"           content="<?php echo ($websiteGeneral['website_general_url'] == '') ? $this->serverUrl() : $websiteGeneral['website_general_url'];?>" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="<?php echo $websiteGeneral['website_general_title'];?>" />
+    <meta property="og:description"   content="<?php echo $websiteGeneral['website_general_description'];?>" />
+    <meta property="og:image"         content="<?php echo $websiteGeneral['website_general_image'];?>" />
+
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath('pictures/websites/' . $websiteGeneral['website_general_favicon'])))
+        ->prependStylesheet($this->basePath('css/responsive.css'))
+        ->prependStylesheet($this->basePath('css/meanmenu.min.css'))
+        ->prependStylesheet($this->basePath('css/style.css'))
+        ->prependStylesheet($this->basePath('css/main.css'))
+        ->prependStylesheet($this->basePath('css/animate.css'))
+        ->prependStylesheet($this->basePath('css/magnific-popup.css'))
+        ->prependStylesheet($this->basePath('css/owl.carousel.min.css'))
+        ->prependStylesheet($this->basePath('css/font-awesome.min.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/css'));
+    ?>
+
+</head>
+<body style="overflow-x: hidden;">
+<!-- Preloader Start -->
+<div id="preloader" style="display: none;">
+    <div id="preloader-status" style="display: none;"></div>
+</div>
+<!-- Preloader End -->
+<!-- Header Start -->
+<header>
+    <!-- Main Menu Start -->
+    <div class="hd-style1">
+        <!-- Header Top Start -->
+        <div class="hd-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="hd-lft">
+                            <ul>
+                                <li><i class="fa fa-phone"></i>+84 937 266 388 / +84 933 885 828</li>
+                                <li><i class="glyphicon glyphicon-globe"></i>
+                                    <?php if (isset($_GET['lang']) && $_GET['lang'] == 'vi_VN') {
+                                        echo '<a href="' . $this->serverUrl(true) . '?&lang=en_US">EN</a>';
+                                    } else {
+                                        echo '<a href="' . $this->serverUrl(true) . '?&lang=vi_VN">VN</a>';
+                                    }
+                                    ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="hd-rgt">
+                            <!--<span class="follow-title">Theo dõi</span>-->
+                            <ul>
+                                <li><a href="<?php echo $template[35]['template_title_' . $lang] ?>"><i class="fa fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top End -->
+        <div class="mnmenu-sec" style="margin-top: 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 nav-menu">
+                        <div class="col-md-3">
+                            <div class="logo">
+                                <a href="<?php echo $this->url('home');?>"><img src="<?php echo $this->basePath('pictures/templates/' . $logo['template_picture']);?>" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="menu">
+                                <nav id="main-menu" class="main-menu" style="display: block;">
+                                    <ul>
+                                    <?php foreach ($navigations as $v) : ?>
+                                    <?php if ($v['navigation_parent'] == 0) : ?>
+                                        <?php $sub = false;
+                                        $s = ''; ?>
+                                        <?php
+                                        foreach ($navigations as $vv) {
+                                            if ($vv['navigation_parent'] == $v['navigation_id']) {
+                                                $sub = true;
+                                                $s .= '<li><a href="' . $vv['navigation_url_name'] . '">' . $this->escapeHtml($vv['navigation_name_' . $lang]) . '</a></li>';
+                                            }
+                                        }
+                                        ?>
+                                        <?php if ($sub == true) {
+                                            echo '<li><a href="' . $v['navigation_url_name'] . '">' . $v['navigation_name_' . $lang] . '<i class="fa fa-angle-down"></i></a><ul>' . $s . '</ul></li>';
+                                        } else {
+                                            echo '<li><a href="' . $v['navigation_url_name'] . '">' . $this->escapeHtml($v['navigation_name_' . $lang]) . '</a></li>';
+                                        } ?>
+                                    <?php endif; ?>
+                                    <?php endforeach; ?>
+                                    </ul>
+
+                                </nav>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Menu End -->
+</header>
+<!-- Header End -->
+
+<?php echo $this->content;?>
+
+<!-- Footer Section Start -->
+<footer>
+    <!-- Footer Top Section Start -->
+    <div class="footer-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-wedget-one">
+                        <a href="<?php echo $this->url('home');?>"><img src="<?php echo $this->basePath('pictures/templates/' . $logo['template_picture']);?>" alt=""></a>
+                        <?php echo $template[26]['template_content_' . $lang] ?>
+                        <div class="footer-social-profile">
+                            <ul>
+                                <li><a href="<?php echo $template[35]['template_title_' . $lang] ?>"><i class="fa fa-facebook"></i></a></li>
+<!--                                <li><a href="/index.html"><i class="fa fa-twitter"></i></a></li>-->
+                                <!--                                <li><a href="/index.html"><i class="fa fa-google-plus"></i></a></li>-->
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-widget-menu">
+                        <h2><?php echo $this->translate('service');?></h2>
+                        <ul>
+                            <?php foreach($serviceCategory as $v) {?>
+                            <li><a href="<?php echo $this->url('home-service-category', array('name' => $this->function()->formatTitle($v['category_name_' . $lang]), 'id' => $v['category_id'])); ?>"><?php echo $v['category_name_' . $lang];?></a></li>
+                            <?php }?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-widget-menu">
+                        <h2><?php echo $this->translate('category');?></h2>
+                        <ul>
+                            <?php foreach ($navigations as $v) : ?>
+                            <?php if ($v['navigation_parent'] == 0) : ?>
+                                    <?php $sub = false; foreach ($navigations as $vv) {
+                                        if ($vv['navigation_parent'] == $v['navigation_id']) {
+                                            $sub = true;
+                                        }
+                                    } ?>
+                                    <?php if ($sub == false) {?>
+                            <li><a href="<?php echo $v['navigation_url_name'];?> ?>"><?php echo $this->escapeHtml($v['navigation_name_' . $lang]); ?></a></li>
+                                    <?php }?>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-wedget-four">
+                        <h2><?php echo $this->translate('contact');?></h2>
+                        <div class="inner-box">
+                            <div class="media">
+                                <div class="inner-item">
+                                    <div class="media-left">
+                                        <span class="icon"><i class="fa fa-map-marker"></i></span>
+                                    </div>
+                                    <div class="media-body">
+                                        <span class="inner-text"><?php echo $template[32]['template_title_' . $lang] ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="inner-item">
+                                    <div class="media-left">
+                                        <span class="icon"><i class="fa fa-envelope-o"></i></span>
+                                    </div>
+                                    <div class="media-body">
+                                        <span class="inner-text"><?php echo $template[33]['template_title_' . $lang] ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="inner-item">
+                                    <div class="media-left">
+                                        <span class="icon"><i class="fa fa-phone"></i></span>
+                                    </div>
+                                    <div class="media-body">
+                                        <span class="inner-text"><?php echo $template[34]['template_title_' . $lang] ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Top Section End -->
+
+</footer>
+
+<?php echo $this->inlineScript()
+    ->prependFile($this->basePath('js/custom.js'))
+    ->prependFile($this->basePath('js/jquery.sticky.js'))
+    ->prependFile($this->basePath('js/jquery.meanmenu.min.js'))
+    ->prependFile($this->basePath('js/waypoints.min.js'))
+    ->prependFile($this->basePath('js/wow.min.js'))
+    ->prependFile($this->basePath('js/jquery.magnific-popup.min.js'))
+    ->prependFile($this->basePath('js/modernizr.min.js'))
+    ->prependFile($this->basePath('js/jquery.counterup.min.js'))
+    ->prependFile($this->basePath('js/jquery.scrollUp.min.js'))
+    ->prependFile($this->basePath('js/owl.animate.js'))
+    ->prependFile($this->basePath('js/owl.carousel.min.js'))
+    ->prependFile($this->basePath('js/isotope.pkgd.min.js'))
+    ->prependFile($this->basePath('js/imagesloaded.pkgd.min.js'))
+    ->prependFile($this->basePath('js/bootstrap.min.js'))
+    ->prependFile($this->basePath('js/jquery-2.2.4.min.js'));
+; ?>
+
+<script lang="javascript">var _vc_data = {id : 2923908, secret : '755d6049f30b366b66f8fb1ff66472c6'};(function() {var ga = document.createElement('script');ga.type = 'text/javascript';ga.async=true; ga.defer=true;ga.src = '//live.vnpgroup.net/client/tracking.js';var s = document.getElementsByTagName('script');s[0].parentNode.insertBefore(ga, s[0]);})();</script>
+
+<a id="scrollUp" href="/index.html#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="fa fa-angle-up"></i></a></body></html>

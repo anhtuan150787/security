@@ -1,0 +1,321 @@
+<div class="x_panel">
+    <div class="x_title">
+        <h2>
+            <a href="<?php echo $this->url('admin/default', ['controller' => 'group-navigation', 'action' => 'index']); ?>">
+                <button type="button" class="btn btn-default">Quay lại Danh sách Menu</button>
+            </a>
+            <a href="<?php echo $this->url('admin/default', ['controller' => 'group-navigation', 'action' => 'edit'], ['query' => ['id' => $groupNavigation['group_navigation_id']]]); ?>">
+                <button type="button" class="btn btn-info">Cập
+                    nhật <?php echo $groupNavigation['group_navigation_name']; ?></button>
+            </a>
+        </h2>
+        <div class="clearfix"></div>
+    </div>
+
+    <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+
+    <div class="x_content">
+
+        <?php if ($id == null) {
+            $action = 'add';
+        } else {
+            $action = 'edit';
+        }
+        ?>
+
+        <div class="table-responsive" style="overflow: hidden; min-height: 100%">
+            <form
+                action="<?php echo $this->url('admin/default', ['controller' => $module, 'action' => $action]); ?>"
+                class="form-horizontal form-label-left" novalidate="novalidate" method="post">
+                <table class="table table-striped jambo_table bulk_action">
+                    <thead>
+                    <tr class="headings">
+                        <th>Vị trí</th>
+                        <th>Liên kết (VN)</th>
+                        <th>Liên kết (EN)</th>
+                        <th>Thuộc liên kết</th>
+                        <th>Loại</th>
+                        <th>Liên kết</th>
+                        <th>Trạng thái</th>
+                        <th>Chức năng</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <?php if ($id != null) { ?>
+                        <tr>
+                            <td colspan="7"></td>
+                            <td class="text-left">
+                                <a href="<?php echo $this->url('admin/default', ['controller' => $module, 'action' => 'index'], ['query' => ['group_navigation_id' => $_GET['group_navigation_id']]]); ?>">
+                                    <button type="button" class="btn btn-primary">Thêm mới</button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php } ?>
+
+                    <?php if ($id == null) { ?>
+                        <tr class="even pointer">
+                            <td class="col-md-1 item form-group"><input type="text" class="form-control"
+                                                                        name="navigation_position"/></td>
+                            <td class="col-md-2 item form-group"><input type="text" class="form-control"
+                                                                        required="required"
+                                                                        name="navigation_name_vn"
+                                                                        id="navigation_name_vn"/></td>
+                            <td class="col-md-2 item form-group"><input type="text" class="form-control"
+                                                                        required="required"
+                                                                        name="navigation_name_en"
+                                                                        id="navigation_name_en"/></td>
+                            <td class="col-md-1">
+                                <select class="form-control" name="navigation_parent">
+                                    <option value="0">--- Gốc ---</option>
+                                    <?php foreach ($navigationParent as $v) { ?>
+                                        <option
+                                            value="<?php echo $v['navigation_id']; ?>"><?php echo str_repeat('__', $v['navigation_level']) . ' ' . $this->escapeHtml($v['navigation_name_vn']); ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                            <td class="col-md-1 item form-group">
+                                <select class="form-control" required="required" id="type" name="navigation_type">
+                                    <option value="">-- Loại --</option>
+                                    <?php foreach ($navigationTypes as $k => $v) { ?>
+                                        <option value="<?php echo $k; ?>"><?php echo $v; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </td>
+                            <td class="col-md-3 item form-group">
+                                <select class="form-control" required="required" id="navigation_url_id"
+                                        name="navigation_url_id">
+                                    <option value="">-- Liên kết --</option>
+                                </select>
+                                <input class="form-control" type="hidden" name="navigation_url_name"
+                                       id="navigation_url_name" value=""/>
+                            </td>
+                            <td class="col-md-4 item form-group">
+                                <select class="form-control" required="required" id="navigation_status"
+                                        name="navigation_status">
+                                    <?php foreach($status as $k => $v) {?>
+                                    <option value="<?php echo $k;?>"><?php echo $v;?></option>
+                                    <?php }?>
+                                </select>
+                            </td>
+                            <td class="col-md-1 text-left">
+                                <input type="hidden" name="group_navigation_id" id="group_navigation_id"
+                                       value="<?php echo $_GET['group_navigation_id']; ?>"/>
+                                <button type="submit" class="btn btn-success">Thêm</button>
+                            </td>
+                        </tr>
+                    <?php } ?>
+
+                    <?php foreach ($navigation as $row) { ?>
+
+                        <?php if ($id == $row['navigation_id']) { ?>
+                            <tr class="even pointer" id="item_<?php echo $row['navigation_id'];?>">
+                                <td class="col-md-1 item form-group"><input type="text" class="form-control"
+                                                                            name="navigation_position"
+                                                                            value="<?php echo $row['navigation_position']; ?>"
+                                                                            required="required"/></td>
+                                <td class="col-md-2 item form-group"><input type="text" class="form-control"
+                                                                            name="navigation_name_vn"
+                                                                            id="navigation_name_vn"
+                                                                            value="<?php echo $row['navigation_name_vn']; ?>"
+                                                                            required="required"/></td>
+                                <td class="col-md-2 item form-group"><input type="text" class="form-control"
+                                                                            name="navigation_name_en"
+                                                                            id="navigation_name_en"
+                                                                            value="<?php echo $row['navigation_name_en']; ?>"
+                                                                            required="required"/></td>
+                                <td class="col-md-1">
+                                    <select class="form-control" name="navigation_parent">
+                                        <option value="0">--- Gốc ---</option>
+                                        <?php foreach ($navigationParent as $v) { ?>
+                                            <option <?php echo ($row['navigation_parent'] == $v['navigation_id']) ? 'selected="selected"' : ''; ?>
+                                                value="<?php echo $v['navigation_id']; ?>"><?php echo str_repeat('__', $v['navigation_level']) . ' ' . $this->escapeHtml($v['navigation_name_vn']); ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </td>
+                                <td class="col-md-1 item form-group">
+                                    <select class="form-control" id="type" name="navigation_type"
+                                            required="required">
+                                        <option value="">-- Loại --</option>
+                                        <?php foreach ($navigationTypes as $k => $v) { ?>
+                                            <option <?php echo ($row['navigation_type'] == $k) ? 'selected="selected"' : ''; ?>
+                                                value="<?php echo $k; ?>"><?php echo $v; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </td>
+                                <td class="col-md-3 item form-group">
+                                    <select class="form-control" required="required" id="navigation_url_id"
+                                            name="navigation_url_id">
+                                        <option value="">-- Liên kết --</option>
+                                    </select>
+                                    <input class="form-control" type="hidden" name="navigation_url_name"
+                                           id="navigation_url_name"
+                                           value="<?php echo $row['navigation_url_name']; ?>"/>
+                                </td>
+                                <td class="col-md-4 item form-group">
+                                    <select class="form-control" required="required" id="navigation_status"
+                                            name="navigation_status">
+                                        <?php foreach($status as $k => $v) {?>
+                                            <option <?php echo ($row['navigation_status'] == $k) ? 'selected="selected"' : ''; ?> value="<?php echo $k;?>"><?php echo $v;?></option>
+                                        <?php }?>
+                                    </select>
+                                </td>
+                                <td class="col-md-1 text-left">
+                                    <input type="hidden" name="group_navigation_id" id="group_navigation_id"
+                                           value="<?php echo $row['group_navigation_id']; ?>"/>
+                                    <input type="hidden" name="id"
+                                           value="<?php echo $row['navigation_id']; ?>"/>
+                                    <button type="submit" class="btn btn-success">Cập nhật</button>
+                                    <a data-toggle="tooltip" data-original-title="Xóa" data-placement="top"
+                                       href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'delete'), array('query' => array('id' => $record['navigation_id'], 'group_navigation_id' => $_GET['group_navigation_id']))); ?>" onclick="confirmDelete('deleteItem', this)">
+                                        <button type="button" class="btn btn-default">Xóa</button>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        <?php } else { ?>
+
+                            <tr id="item_<?php echo $row['navigation_id'];?>">
+                                <td class="col-md-1"><?php echo $row['navigation_position']; ?></td>
+                                <td class="col-md-2"><?php echo str_repeat('__', $row['navigation_level']) . ' ' . $this->escapeHtml($row['navigation_name_vn']); ?></td>
+                                <td class="col-md-2" colspan="2"><?php echo str_repeat('__', $row['navigation_level']) . ' ' . $this->escapeHtml($row['navigation_name_en']); ?></td>
+                                <td class="col-md-1"><?php echo $navigationTypes[$row['navigation_type']]; ?></td>
+                                <td class="col-md-4"><?php echo $this->escapeHtml($row['navigation_url_name']); ?></td>
+                                <td class="col-md-1"><?php echo $status[$row['navigation_status']]; ?></td>
+                                <td class="col-md-1">
+                                    <a data-toggle="tooltip" data-original-title="Cập nhật" data-placement="top"
+                                       href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'index'), array('query' => array('id' => $row['navigation_id'], 'group_navigation_id' => $_GET['group_navigation_id']))); ?>">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a data-toggle="tooltip" data-original-title="Xóa" data-placement="top"
+                                       href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'delete'), array('query' => array('id' => $row['navigation_id'], 'group_navigation_id' => $_GET['group_navigation_id']))); ?>" onclick="confirmDelete('deleteItem', this)">
+                                        <i class="fa fa-remove"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+                    <?php } ?>
+
+                    </tbody>
+                </table>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<?php $this->inlineScript()->captureStart();?>
+    var page = jQuery.parseJSON('<?php echo addslashes(json_encode($page));?>');
+    var post = jQuery.parseJSON('<?php echo addslashes(json_encode($post));?>');
+    var postCategory = jQuery.parseJSON('<?php echo addslashes(json_encode($postCategory));?>');
+    var serviceCategory = jQuery.parseJSON('<?php echo addslashes(json_encode($serviceCategory));?>');
+    var service = jQuery.parseJSON('<?php echo addslashes(json_encode($service));?>');
+
+    var options = '';
+    var linkSelect = '';
+    var selectOption;
+
+    <?php if ($id != null) { ?>
+    linkSelect = '<?php echo $record['navigation_url_id'];?>';
+    <?php }?>
+
+    optionsChange($('#type').val());
+
+    $('#type').change(function () {
+        optionsChange($(this).val());
+    });
+
+
+    function optionsChange(type) {
+
+        $('#navigation_url_name').hide().removeAttr('required');
+        $('#navigation_url_id').show().attr('required', 'required');
+        var options;
+
+        switch (type) {
+            case "1":
+                options = '';
+                $.each(page, function (k, v) {
+                    if (linkSelect == v.post_id) {
+                        selectOption = 'selected="selected"';
+                    } else {
+                        selectOption = '';
+                    }
+                    options += '<option ' + selectOption + ' value="' + v.post_id + '">' + v.post_title_vn + '</option>';
+                });
+                break;
+
+            case "2":
+                options = '';
+                $.each(post, function (k, v) {
+                    if (linkSelect == v.post_id) {
+                        selectOption = 'selected="selected"';
+                    } else {
+                        selectOption = '';
+                    }
+                    options += '<option ' + selectOption + ' value="' + v.post_id + '">' + v.post_title_vn + '</option>';
+                });
+                break;
+
+            case "3":
+                options = '';
+            <?php foreach($postCategory as $v) {?>
+                if (linkSelect == <?php echo $v['category_id'];?>) {
+                    selectOption = 'selected="selected"';
+                } else {
+                    selectOption = '';
+                }
+                options += '<option ' + selectOption + ' value="<?php echo $v['category_id'];?>"><?php echo str_repeat('__', $v['category_level']) .  $v['category_name_vn'];?></option>';
+            <?php }?>
+
+                break;
+
+            case "4" :
+                options = '';
+                $('#navigation_url_name').show().attr('type', 'text').attr('required', 'required');
+                ;
+                $('#navigation_url_id').hide();
+                break;
+
+            case "5":
+                options = '';
+
+                <?php foreach($serviceCategory as $v) {?>
+                    if (linkSelect == <?php echo $v['category_id'];?>) {
+                        selectOption = 'selected="selected"';
+                    } else {
+                        selectOption = '';
+                    }
+                    options += '<option ' + selectOption + ' value="<?php echo $v['category_id'];?>"><?php echo str_repeat('__', $v['category_level']) .  $v['category_name_vn'];?></option>';
+                <?php }?>
+                break;
+
+            case "6":
+                options = '';
+                $.each(service, function (k, v) {
+                    if (linkSelect == v.post_id) {
+                        selectOption = 'selected="selected"';
+                    } else {
+                        selectOption = '';
+                    }
+                    options += '<option ' + selectOption + ' value="' + v.post_id + '">' + v.post_title_vn + '</option>';
+                });
+                break;
+        }
+
+        $('#navigation_url_id').html(options);
+        $('#navigation_url_name').val($('#navigation_url_id').find('option:selected').text());
+
+        <?php if ($id != null && $record['navigation_type'] == 4) { ?>
+        $('#navigation_url_name').val('<?php echo $record['navigation_url_name'];?>');
+        <?php }?>
+
+        $('#navigation_url_id').change(function () {
+            $('#navigation_url_name').val($(this).find('option:selected').text());
+        })
+    }
+
+<?php $this->inlineScript()->captureEnd();?>

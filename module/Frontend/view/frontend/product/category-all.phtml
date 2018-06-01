@@ -1,0 +1,73 @@
+
+<div id="content" class="no-top no-bottom">
+    <!-- subheader -->
+    <section id="subheader" data-speed="8" data-type="background" style="background-position: 50% -25px; background: url('<?php echo $this->basePath('public/frontend/images/subheader-1.jpg');?>')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1><?php echo $this->escapeHtml($productCategory['product_category_name']);?></h1>
+                    <?php echo $crum;?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subheader close -->
+
+    <!-- section begin -->
+    <section id="section-portfolio" class="no-top no-bottom" aria-label="section-portfolio">
+        <div class="container">
+
+            <div class="spacer-single"></div>
+
+            <!-- portfolio filter begin -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul id="filters" class="wow fadeInUp" data-wow-delay="0s">
+                        <?php foreach ($productCategories as $v) { ?>
+                            <li><a href="#"
+                                   data-filter=".category_<?php echo $v['product_category_id']; ?>"><?php echo $this->escapeHtml($v['product_category_name']); ?></a>
+                            </li>
+                        <?php } ?>
+                        <li><a href="#" data-filter="*" class="selected">Tất cả</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- portfolio filter close -->
+
+        </div>
+
+        <div id="gallery" class="gallery full-gallery de-gallery pf_full_width wow fadeInUp" data-wow-delay=".3s">
+            <?php foreach ($products as $v) { ?>
+                <!-- gallery item -->
+                <div class="item category_<?php echo $v['product_category_id']; ?>">
+                    <div class="picframe">
+                        <a href="<?php echo $this->url('home-product-detail', array('name' => $this->function()->formatTitle($v['product_name']), 'id' => $v['product_id'])); ?>">
+                                <span class="overlay">
+                                    <span class="pf_text">
+                                        <span
+                                            class="project-name"><?php echo $this->escapeHtml($v['product_name']); ?></span>
+                                    </span>
+                                </span>
+                        </a>
+                        <img width="406" height="271"
+                             src="<?php echo $this->serverUrl() . '/thumbs/timthumb.php?src=' . $this->basePath('public/pictures/products/' . $v['product_picture']) . '&w=406&h=271'; ?>"
+                             alt="<?php echo $this->escapeHtml($v['product_name']); ?>">
+                    </div>
+                </div>
+                <!-- close gallery item -->
+            <?php } ?>
+
+
+        </div>
+
+    </section>
+    <!-- section close -->
+
+    <!-- section begin -->
+    <section id="call-to-action" class="call-to-action bg-color dark text-center" data-speed="5" data-type="background" aria-label="call-to-action">
+        <a onclick="location.href='<?php echo $this->url('home-lien-he');?>#contact_form'" class="btn btn-line-black btn-big">Liên hệ</a>
+    </section>
+    <!-- logo carousel section close -->
+
+</div>

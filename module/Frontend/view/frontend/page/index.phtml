@@ -1,0 +1,30 @@
+<div class="pagehding-sec" style='background-image: url("<?php echo $this->basePath('pictures/templates/' . $template[36]['template_picture']);?>")'>
+    <div class="pagehding-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-heading">
+                    <h1><?php echo $this->escapeHtml($page['post_title_' . $lang]);?></h1>
+                    <?php echo $crum;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about-sec pt-100 pb-100">
+    <div class="about-sec-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-desc">
+                    <div class="sec-title">
+                        <h1><?php echo $this->escapeHtml($page['post_title_' . $lang]);?></h1>
+                        <?php echo $page['post_body_' . $lang];?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

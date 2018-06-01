@@ -1,0 +1,273 @@
+2018-05-29T20:32:22+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/?lang=en_US	GET	http://zend2/gioi-thieu-p-2	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PageController.php(26): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PageController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(97): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-29T20:32:22+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:33:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/gioi-thieu-p-2	GET	http://zend2/public/frontend/images/subheader-5.jpg
+2018-05-29T20:33:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:33:55+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/gioi-thieu-p-2	GET	http://zend2/public/frontend/images/subheader-5.jpg
+2018-05-29T20:33:55+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:33:55+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/gioi-thieu-p-2	GET	http://zend2/pictures/websites/
+2018-05-29T20:37:58+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:40:08+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:40:36+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:42:32+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:42:42+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:42:44+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:42:46+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:42:47+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:42:48+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:43:26+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:43:58+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:43:59+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:44:01+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:44:02+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:44:03+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:44:04+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:44:24+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:46:47+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:46:47+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:47:23+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:47:27+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:49:09+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:49:09+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:49:24+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:49:24+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:49:31+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:49:48+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:49:48+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T20:51:35+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:51:37+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/gioi-thieu-p-2	GET	http://zend2/favicon.ico
+2018-05-29T20:54:50+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:55:08+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:55:11+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:55:13+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:55:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:55:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T20:55:34+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/gioi-thieu-p-2	GET	http://zend2/tin-tuc-nc-4	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(24): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->categoryAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-29T20:55:34+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:06:52+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/gioi-thieu-p-2	GET	http://zend2/tin-tuc-nc-4	Statement could not be executed (23000 - 1052 - Column 'category_id' in where clause is ambiguous)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT *  FROM ...')
+#2 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(38): Application\Model\Builder->fetchWhere(Array)
+#3 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(34): Application\Model\Builder->fetchPage(Array)
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->categoryAction()
+#5 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#11 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#16 {main}
+2018-05-29T21:06:52+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:08:39+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:08:46+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:09:03+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:09:10+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T21:09:35+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:09:35+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T21:10:01+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:10:01+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T21:10:12+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/tin-tuc-nc-4	GET	http://zend2/post-title-will-be-here-n-25	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(67): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->detailAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-29T21:10:12+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:14:42+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/tin-tuc-nc-4	GET	http://zend2/post-title-will-be-here-n-26	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(67): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->detailAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-29T21:14:42+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:17:54+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/tin-tuc-nc-4	GET	http://zend2/post-title-will-be-here-n-26	Statement could not be executed (42000 - 1327 - Undeclared variable: p)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT p FROM p...')
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(72): Application\Model\Builder->fetchWhere('post_status = 1...')
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->detailAction()
+#4 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#5 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-29T21:17:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:23:26+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/tin-tuc-nc-4	GET	http://zend2/post-title-will-be-here-n-26	Statement could not be executed (42000 - 1327 - Undeclared variable: p)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT p FROM p...')
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(72): Application\Model\Builder->fetchWhere('post_status = 1...')
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->detailAction()
+#4 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#5 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-29T21:23:26+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:23:53+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/tin-tuc-nc-4	GET	http://zend2/post-title-will-be-here-n-26	Statement could not be executed (42000 - 1327 - Undeclared variable: p)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT p FROM p...')
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(72): Application\Model\Builder->fetchWhere('post_status = 1...')
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->detailAction()
+#4 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#5 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-29T21:23:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:24:21+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/post-title-will-be-here-n-26?debug=1	Statement could not be executed (42000 - 1327 - Undeclared variable: p)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT p FROM p...')
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\PostController.php(72): Application\Model\Builder->fetchWhere('post_status = 1...')
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\PostController->detailAction()
+#4 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#5 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-29T21:24:22+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:24:50+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:24:53+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:25:14+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T21:25:28+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-29T21:26:04+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:26:06+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:52:35+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:52:37+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:52:40+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:52:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/post/index	GET	http://zend2/admin/post/images/favicon.ico
+2018-05-29T21:53:12+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=5&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(146): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-29T21:53:15+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:53:25+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=6&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(146): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-29T21:53:27+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:53:28+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:53:37+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:53:38+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2
+2018-05-29T21:53:43+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/post-title-will-be-here-n-25	GET	http://zend2/lien-he	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\ContactController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\ContactController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(100): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-29T21:53:43+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/css/bootstrap.min.css	GET	http://zend2/fonts/glyphicons-halflings-regular.woff2

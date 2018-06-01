@@ -1,0 +1,177 @@
+<div class="slider index2">
+    <div class="all-slide owl-item owl-carousel owl-theme owl-loaded owl-text-select-on">
+        <?php foreach ($bannerSlide as $v) {?>
+        <div class="owl-item cloned" style="width: 1903px; margin-right: 0px;"><div class="single-slide" style="background-image:url(<?php echo $this->basePath('pictures/templates/' . $v['template_picture']);?>);">
+                <div class="slider-overlay"></div>
+                <div class="slider-text">
+                    <div class="slider-wraper">
+                        <h1 class="animated fadeInLeft" style="opacity: 1;"><?php echo $v['template_title_' . $lang]; ?></h1>
+                        <p class="animated fadeInDown" style="opacity: 1;">
+                            <?php echo $v['template_content_' . $lang]; ?>
+                        </p>
+                        <ul>
+                            <li><a href="<?php echo $this->url('home-lien-he');?>" class="animated fadeInUp" style="opacity: 1;"><?php echo $this->translate('contact');?></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php }?>
+    </div>
+</div>
+<!-- Slider Section End -->
+<!-- About Start -->
+<div class="about-sec pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="about-desc">
+                    <div class="sec-title">
+                        <h1><?php echo $this->translate('about us');?></h1>
+                        <?php echo $this->function()->cutString($aboutUs['post_body_' . $lang], 80) ;?>
+                        <div class="see-more"><a href="<?php echo $this->url('home-page', array('name' => $this->function()->formatTitle($aboutUs['post_title_' . $lang]), 'id' => $aboutUs['post_id']));?>"><?php echo $this->translate('see more');?></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="about-us-img">
+                    <img src="<?php echo $this->basePath('pictures/templates/' . $template[19]['template_picture']);?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<!-- Why Choose Us Start -->
+<div class="why-choose why-choos-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 why-choose-us-before">
+                <div class="sec-title">
+                    <h1><?php echo $this->translate('why choose us'); ?></h1>
+                </div>
+                <?php foreach($whyChoose as $v) {?>
+                <div class="col-md-6 col-sm-6">
+                    <div class="why-choose-item">
+                        <div class="media">
+                            <div class="why-choose-icon">
+                                <img src="<?php echo $this->basePath('pictures/templates/' . $v['template_picture']);?>" alt="">
+                            </div>
+                            <div class="media-body">
+                                <h2><?php echo $v['template_title_' . $lang];?></h2>
+                                <?php echo $v['template_content_' . $lang];?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php }?>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Why Choose Us End -->
+<!-- Service Start -->
+<div class="service2-sec pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sec-title">
+                    <h1><span><?php echo $this->translate('service');?></span></h1>
+                    <?php echo $template[24]['template_content_' . $lang];?>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="service2-item">
+                <?php foreach($serviceCategory as $v) {?>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service2-inner">
+                        <div class="media">
+                            <div class="media-left">
+                                <div class="service2-icon">
+                                    <img src="<?php echo $this->basePath('pictures/categories/' . $v['category_picture']);?>" alt="">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <div class="service2-details">
+                                    <h2><a href="<?php echo $this->url('home-service-category', array('name' => $this->function()->formatTitle($v['category_name_' . $lang]), 'id' => $v['category_id'])); ?>"><?php echo $v['category_name_' . $lang];?></a></h2>
+                                    <?php echo $v['category_description_' . $lang];?>
+                                    <a href="<?php echo $this->url('home-service-category', array('name' => $this->function()->formatTitle($v['category_name_' . $lang]), 'id' => $v['category_id'])); ?>"><?php echo $this->translate('see more');?> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php }?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="testimonial-sec pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-text">
+                    <span class="tst-sbtitle"><?php echo $this->translate('what\'s say about our client'); ?></span>
+                    <div class="sec-title">
+                        <h1><?php echo $this->translate('client review'); ?></h1>
+                    </div>
+                    <p><?php echo $this->translate('some customer reviews after the selected and use service'); ?></p>
+                </div>
+            </div>
+            <div class="col-md-8 no-padding">
+                <div class="all-testimonial2 owl-carousel owl-theme owl-loaded">
+
+                    <?php foreach($comment as $v) {
+                       echo $v['template_content_' . $lang];
+                    }?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial Section End -->
+
+<!-- Blog Section Start -->
+<div class="blog-sec pt-100 pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sec-title">
+                    <h1><span><?php echo $this->translate('news'); ?></span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <?php foreach($news as $v) {
+                $newsUrl = $this->url('home-news-detail', array('name' => $this->function()->formatTitle($v['post_title_' . $lang]), 'id' => $v['post_id']));
+                ?>
+            <div class="col-md-4 col-sm-6">
+                <div class="media">
+                    <div class="single-post">
+                        <div class="blog-thumb">
+                            <img src="<?php echo $this->basePath('pictures/posts/' . $v['post_picture']);?>" alt="">
+                            <a href="<?php echo $newsUrl;?>"><?php echo $this->translate('see more');?></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="single-post-desc">
+                                <h2><a href="<?php echo $newsUrl;?>"><?php echo $v['post_title_' . $lang]; ?></a></h2>
+                                <?php echo $v['post_quote_' . $lang]; ?>
+                                <div class="post-date">
+                                    <ul>
+                                        <li><a href="<?php echo $newsUrl;?>"><i class="fa fa-pencil"></i><?php echo $this->translate('detail');?></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <?php }?>
+
+        </div>
+    </div>
+</div>

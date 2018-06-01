@@ -1,0 +1,60 @@
+<div class="x_panel">
+    <?php echo $this->partial('admin/partial/form_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+    <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+    <div class="x_content">
+        <div class="form-horizontal form-label-left">
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 col-xs-12 text-right" for="group_navigation_status">Tên</label>
+
+                <div class="col-md-10 col-sm-10 col-xs-12 item">
+                    <?php echo $this->escapeHtml($record['contact_fullname']); ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 col-xs-12 text-right" for="group_navigation_status">Email</label>
+
+                <div class="col-md-10 col-sm-10 col-xs-12 item">
+                    <?php echo $this->escapeHtml($record['contact_email']); ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 col-xs-12 text-right" for="group_navigation_status">Điện
+                    thoại</label>
+
+                <div class="col-md-10 col-sm-10 col-xs-12 item">
+                    <?php echo $this->escapeHtml($record['contact_phone']); ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 col-xs-12 text-right" for="group_navigation_status">Ngày</label>
+
+                <div class="col-md-10 col-sm-10 col-xs-12 item">
+                    <?php echo $this->date()->dateTimeFormat($this->escapeHtml($record['contact_date'])); ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 col-sm-2 col-xs-12 text-right" for="group_navigation_status">Nội dung</label>
+
+                <div class="col-md-10 col-sm-10 col-xs-12 item">
+                    <?php echo $this->escapeHtml($record['contact_content']); ?>
+                </div>
+            </div>
+
+            <div class="ln_solid clear"></div>
+
+            <div class="form-group">
+                <div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-2">
+                    <input type="button" onclick="location.href='<?php echo $this->url('admin/default', ['controller' => $module, 'action' => 'index']);?>'" name="back" id="back" class="btn btn-default" value="Quay về">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

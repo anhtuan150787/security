@@ -1,0 +1,846 @@
+2018-05-24T15:01:50+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/public/admin/	Statement could not be executed (42000 - 1064 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND group_menu_status = 1
+                        AND menu_parent = 0  ORDER BY' at line 2)
+#0 D:\www\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 D:\www\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT *  FROM ...')
+#2 D:\www\zend2\module\Application\src\Application\Model\GroupMenu.php(35): Application\Model\Builder->fetchWhere(Array)
+#3 D:\www\zend2\module\Application\src\Application\Model\GroupMenu.php(22): Application\Model\GroupMenu->getGroupMenuList(NULL, 0, -1, Array)
+#4 D:\www\zend2\module\Admin\src\Admin\Controller\MainController.php(53): Application\Model\GroupMenu->getGroupMenu(NULL)
+#5 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 D:\www\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-24T15:01:54+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/public/admin/login/index	GET	http://zend2/favicon.ico
+2018-05-24T15:03:43+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/public/admin/index/index	GET	http://zend2/public/admin/index/images/favicon.ico
+2018-05-24T15:05:05+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/menu/index	GET	http://zend2/admin/menu/images/favicon.ico
+2018-05-24T15:05:19+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/account/index	GET	http://zend2/admin/account/images/favicon.ico
+2018-05-24T15:05:20+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/group-account/index	GET	http://zend2/admin/group-account/images/favicon.ico
+2018-05-24T15:17:34+07:00 ERR (3): error-controller-not-found	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/group-account/acl?id=1	GET	http://zend2/admin/service/index
+2018-05-24T15:18:01+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/index/index	GET	http://zend2/admin/index/images/favicon.ico
+2018-05-24T15:18:30+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/acl/index	GET	http://zend2/admin/acl/images/favicon.ico
+2018-05-24T15:20:04+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service/index	GET	http://zend2/admin/service/images/favicon.ico
+2018-05-24T15:21:17+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service/add	GET	http://zend2/admin/service-category/index	Zend\Mvc\Controller\ControllerManager::createFromInvokable: failed retrieving "admincontrollerservicecategory(alias: Admin\Controller\ServiceCategory)" via invokable class "Admin\Controller\ServiceCategoryController"; class does not exist
+#0 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\ServiceManager.php(642): Zend\ServiceManager\AbstractPluginManager->createFromInvokable('admincontroller...', 'Admin\Controlle...')
+#1 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\ServiceManager.php(598): Zend\ServiceManager\ServiceManager->doCreate('Admin\Controlle...', 'admincontroller...')
+#2 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\ServiceManager.php(530): Zend\ServiceManager\ServiceManager->create(Array)
+#3 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('Admin\Controlle...', false)
+#4 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\ControllerManager.php(137): Zend\ServiceManager\AbstractPluginManager->get('Admin\Controlle...', Array, false)
+#5 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(76): Zend\Mvc\Controller\ControllerManager->get('Admin\Controlle...')
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 D:\www\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T15:28:29+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service-category/index	GET	http://zend2/admin/service-category/images/favicon.ico
+2018-05-24T15:48:59+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service/add	POST	http://zend2/admin/service/add	Statement could not be executed (HY000 - 1364 - Field 'post_view' doesn't have a default value)
+#0 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Db\TableGateway\AbstractTableGateway.php(307): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Db\TableGateway\AbstractTableGateway.php(263): Zend\Db\TableGateway\AbstractTableGateway->executeInsert(Object(Zend\Db\Sql\Insert))
+#2 D:\www\zend2\module\Application\src\Application\Model\Builder.php(147): Zend\Db\TableGateway\AbstractTableGateway->insert(Array)
+#3 D:\www\zend2\module\Admin\src\Admin\Controller\ServiceController.php(175): Application\Model\Builder->savePrimary(Array, NULL)
+#4 D:\www\zend2\module\Admin\src\Admin\Controller\ServiceController.php(64): Admin\Controller\ServiceController->save()
+#5 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\ServiceController->addAction()
+#6 D:\www\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 D:\www\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T15:49:22+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/post/index	GET	http://zend2/admin/post/images/favicon.ico
+2018-05-24T15:49:27+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service/index	GET	http://zend2/admin/service/delete?id=5	Service "response" has been requested to plugin manager of type "Zend\Mvc\Controller\PluginManager", but couldn't be retrieved.
+A previous exception of type "Zend\ServiceManager\Exception\ServiceNotFoundException" has been raised in the process.
+By the way, a service with the name "response" has been found in the parent service locator "Zend\ServiceManager\ServiceManager": did you forget to use $parentLocator = $serviceLocator->getServiceLocator() in your factory code?
+#0 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(312): Zend\ServiceManager\Exception\ServiceLocatorUsageException::fromInvalidPluginManagerRequestedServiceName(Object(Zend\Mvc\Controller\PluginManager), Object(Zend\ServiceManager\ServiceManager), 'response', Object(Zend\ServiceManager\Exception\ServiceNotFoundException))
+#1 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(118): Zend\ServiceManager\AbstractPluginManager->tryThrowingServiceLocatorUsageException('response', false, Object(Zend\ServiceManager\Exception\ServiceNotFoundException))
+#2 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('response', NULL, true)
+#3 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('response', NULL)
+#4 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('response')
+#5 D:\www\zend2\module\Admin\src\Admin\Controller\ServiceController.php(149): Zend\Mvc\Controller\AbstractController->__call('response', Array)
+#6 D:\www\zend2\module\Admin\src\Admin\Controller\ServiceController.php(149): Admin\Controller\ServiceController->response()
+#7 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\ServiceController->deleteAction()
+#8 D:\www\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#10 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#14 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#15 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#16 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#17 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#18 D:\www\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#19 {main}
+2018-05-24T15:50:37+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/group-navigation	GET	http://zend2/admin/images/favicon.ico
+2018-05-24T15:50:38+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?group_navigation_id=5	GET	http://zend2/admin/navigation/images/favicon.ico
+2018-05-24T16:16:54+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?group_navigation_id=5	POST	http://zend2/admin/navigation/add	Service "response" has been requested to plugin manager of type "Zend\Mvc\Controller\PluginManager", but couldn't be retrieved.
+A previous exception of type "Zend\ServiceManager\Exception\ServiceNotFoundException" has been raised in the process.
+By the way, a service with the name "response" has been found in the parent service locator "Zend\ServiceManager\ServiceManager": did you forget to use $parentLocator = $serviceLocator->getServiceLocator() in your factory code?
+#0 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(312): Zend\ServiceManager\Exception\ServiceLocatorUsageException::fromInvalidPluginManagerRequestedServiceName(Object(Zend\Mvc\Controller\PluginManager), Object(Zend\ServiceManager\ServiceManager), 'response', Object(Zend\ServiceManager\Exception\ServiceNotFoundException))
+#1 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(118): Zend\ServiceManager\AbstractPluginManager->tryThrowingServiceLocatorUsageException('response', false, Object(Zend\ServiceManager\Exception\ServiceNotFoundException))
+#2 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('response', NULL, true)
+#3 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('response', NULL)
+#4 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('response')
+#5 D:\www\zend2\module\Admin\src\Admin\Controller\NavigationController.php(114): Zend\Mvc\Controller\AbstractController->__call('response', Array)
+#6 D:\www\zend2\module\Admin\src\Admin\Controller\NavigationController.php(114): Admin\Controller\NavigationController->response()
+#7 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->addAction()
+#8 D:\www\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#10 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#14 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#15 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#16 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#17 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#18 D:\www\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#19 {main}
+2018-05-24T16:18:01+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=9&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 D:\www\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 D:\www\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Admin\Controller\NavigationController->viewModel()
+#6 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#7 D:\www\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#13 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#14 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#15 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 D:\www\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#17 D:\www\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#18 {main}
+2018-05-24T20:05:22+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/public/admin/	Statement could not be executed (42000 - 1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND group_menu_status = 1
+                        AND menu_parent = 0  ORDER BY' at line 2)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT *  FROM ...')
+#2 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\GroupMenu.php(34): Application\Model\Builder->fetchWhere(Array)
+#3 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\GroupMenu.php(22): Application\Model\GroupMenu->getGroupMenuList(NULL, 0, -1, Array)
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(53): Application\Model\GroupMenu->getGroupMenu(NULL)
+#5 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-24T20:05:23+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/public/admin/	Statement could not be executed (42000 - 1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND group_menu_status = 1
+                        AND menu_parent = 0  ORDER BY' at line 2)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(138): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(78): Application\Model\Builder->getFetch('SELECT *  FROM ...')
+#2 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\GroupMenu.php(34): Application\Model\Builder->fetchWhere(Array)
+#3 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\GroupMenu.php(22): Application\Model\GroupMenu->getGroupMenuList(NULL, 0, -1, Array)
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(53): Application\Model\GroupMenu->getGroupMenu(NULL)
+#5 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#10 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#14 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#15 {main}
+2018-05-24T20:05:35+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/public/admin/index/index	GET	http://zend2/public/admin/index/images/favicon.ico
+2018-05-24T20:05:44+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?group_navigation_id=5	GET	http://zend2/admin/navigation/images/favicon.ico
+2018-05-24T20:11:10+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=4&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:11:59+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=4&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:12:07+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=4&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:12:12+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?group_navigation_id=5	GET	http://zend2/admin/navigation/delete?id=9&group_navigation_id=5	Service "response" has been requested to plugin manager of type "Zend\Mvc\Controller\PluginManager", but couldn't be retrieved.
+A previous exception of type "Zend\ServiceManager\Exception\ServiceNotFoundException" has been raised in the process.
+By the way, a service with the name "response" has been found in the parent service locator "Zend\ServiceManager\ServiceManager": did you forget to use $parentLocator = $serviceLocator->getServiceLocator() in your factory code?
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(311): Zend\ServiceManager\Exception\ServiceLocatorUsageException::fromInvalidPluginManagerRequestedServiceName(Object(Zend\Mvc\Controller\PluginManager), Object(Zend\ServiceManager\ServiceManager), 'response', Object(Zend\ServiceManager\Exception\ServiceNotFoundException))
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(118): Zend\ServiceManager\AbstractPluginManager->tryThrowingServiceLocatorUsageException('response', false, Object(Zend\ServiceManager\Exception\ServiceNotFoundException))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('response', NULL, true)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('response', NULL)
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('response')
+#5 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(206): Zend\Mvc\Controller\AbstractController->__call('response', Array)
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->deleteAction()
+#7 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#13 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#17 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#18 {main}
+2018-05-24T20:12:28+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=6&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:15:28+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=5&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:16:02+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=6&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:16:53+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=5&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:17:05+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=5&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:18:29+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/admin/navigation/edit	Statement could not be executed (23000 - 1048 - Column 'navigation_name_vn' cannot be null)
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Db\TableGateway\AbstractTableGateway.php(307): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Db\TableGateway\AbstractTableGateway.php(263): Zend\Db\TableGateway\AbstractTableGateway->executeInsert(Object(Zend\Db\Sql\Insert))
+#2 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Builder.php(147): Zend\Db\TableGateway\AbstractTableGateway->insert(Array)
+#3 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(181): Application\Model\Builder->savePrimary(Array, NULL)
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(123): Admin\Controller\NavigationController->save(NULL)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:18:30+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/index/index	GET	http://zend2/admin/index/images/favicon.ico
+2018-05-24T20:33:32+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=6&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:33:43+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=6&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:33:53+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=6&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:34:08+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=3&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:34:17+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=2&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:34:25+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?id=1&group_navigation_id=5	POST	http://zend2/admin/navigation/edit	Zend\Mvc\Controller\PluginManager::get was unable to fetch or create an instance for viewModel
+#0 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\ServiceManager\AbstractPluginManager.php(116): Zend\ServiceManager\ServiceManager->get('viewModel', true)
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\PluginManager.php(84): Zend\ServiceManager\AbstractPluginManager->get('viewModel', NULL, true)
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(292): Zend\Mvc\Controller\PluginManager->get('viewModel', NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(307): Zend\Mvc\Controller\AbstractController->plugin('viewModel')
+#4 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\NavigationController.php(128): Zend\Mvc\Controller\AbstractController->__call('viewModel', Array)
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Admin\Controller\NavigationController->editAction()
+#6 E:\Xampp\htdocs\zend2\module\Admin\src\Admin\Controller\MainController.php(59): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 [internal function]: Admin\Controller\MainController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#12 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#13 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#14 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#15 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#16 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#17 {main}
+2018-05-24T20:35:56+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service/index	GET	http://zend2/admin/service/images/favicon.ico
+2018-05-24T20:35:59+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/post-category/index	GET	http://zend2/admin/post-category/images/favicon.ico
+2018-05-24T20:43:53+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/service-category/index	GET	http://zend2/admin/service-category/images/favicon.ico
+2018-05-24T20:48:01+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/template/index?group_template_id=5	GET	http://zend2/admin/template/edit?id=7&group_template_id=5	No element by the name of [template_content_vn] found in form
+#0 E:\Xampp\htdocs\zend2\module\Admin\view\admin\template\form.phtml(22): Zend\Form\Fieldset->get('template_conten...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\View\Renderer\PhpRenderer.php(501): include('E:\\Xampp\\htdocs...')
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\View\View.php(205): Zend\View\Renderer\PhpRenderer->render(NULL)
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\View\View.php(233): Zend\View\View->render(Object(Zend\View\Model\ViewModel))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\View\View.php(198): Zend\View\View->renderChildren(Object(Zend\View\Model\ViewModel))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\View\Http\DefaultRenderingStrategy.php(103): Zend\View\View->render(Object(Zend\View\Model\ViewModel))
+#6 [internal function]: Zend\Mvc\View\Http\DefaultRenderingStrategy->render(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('render', Object(Zend\Mvc\MvcEvent), Array)
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(353): Zend\EventManager\EventManager->trigger('render', Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(328): Zend\Mvc\Application->completeRequest(Object(Zend\Mvc\MvcEvent))
+#11 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#12 {main}
+2018-05-24T21:05:15+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:05:15+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/plugin.css
+2018-05-24T21:05:15+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/owl.theme.css
+2018-05-24T21:05:15+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/jpreloader.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/bootstrap.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/animate.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/owl.carousel.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/owl.transitions.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/style.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/magnific-popup.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/color.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/demo.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/bg.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/style%282%29.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/font-awesome.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/style%281%29.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/rev-settings.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/settings.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/css/font-style-2.css
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.isotope.min.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jpreLoader.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/bootstrap.min.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/easing.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.min.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.flexslider-min.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.scrollto.js
+2018-05-24T21:05:16+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/owl.carousel.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/classie.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.countTo.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/video.resize.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/validation.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/wow.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.magnific-popup.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/enquire.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/designesia.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/demo.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.themepunch.revolution.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.themepunch.plugins.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jpreLoader.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/images/logo_lifedeco.png
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/bootstrap.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.isotope.min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/easing.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.flexslider-min.js
+2018-05-24T21:05:17+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.scrollto.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/owl.carousel.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.countTo.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/classie.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/video.resize.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/validation.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/wow.min.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.magnific-popup.min.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/enquire.min.js
+2018-05-24T21:05:18+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/designesia.js
+2018-05-24T21:05:19+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/demo.js
+2018-05-24T21:05:19+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.themepunch.plugins.min.js
+2018-05-24T21:05:19+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/js/jquery.themepunch.revolution.min.js
+2018-05-24T21:05:19+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/frontend/images/logo_lifedeco.png
+2018-05-24T21:05:20+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/pictures/websites/
+2018-05-24T21:15:31+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:15:40+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-24T21:15:42+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:15:42+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-24T21:15:50+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:15:51+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-24T21:17:07+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:17:37+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/public/admin/	GET	http://zend2/public/admin/images/favicon.ico
+2018-05-24T21:19:09+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:19:14+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/pictures/websites/
+2018-05-24T21:19:33+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-24T21:20:03+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:20:04+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-24T21:20:22+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/favicon.ico
+2018-05-24T21:20:39+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/	GET	http://zend2/pictures/websites/
+2018-05-24T21:21:54+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#2 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#3 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#6 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#8 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#10 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#11 {main}
+2018-05-24T21:21:55+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/css/bootstrap.min.css.map
+2018-05-24T21:33:18+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Statement could not be executed (42000 - 1065 - Query was empty)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(71): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(57): Application\Model\Navigation->getFrontendNavigationLoop(5, 0, -1, Array)
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Application\Model\Navigation->getFrontendNavigations(5)
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:33:31+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Statement could not be executed (42000 - 1065 - Query was empty)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(71): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(57): Application\Model\Navigation->getFrontendNavigationLoop(5, 0, -1, Array)
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Application\Model\Navigation->getFrontendNavigations(5)
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:33:53+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Statement could not be executed (42000 - 1065 - Query was empty)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(71): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(57): Application\Model\Navigation->getFrontendNavigationLoop(5, 0, -1, Array)
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Application\Model\Navigation->getFrontendNavigations(5)
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:34:14+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Statement could not be executed (42000 - 1065 - Query was empty)
+#0 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(71): Zend\Db\Adapter\Driver\Pdo\Statement->execute()
+#1 E:\Xampp\htdocs\zend2\module\Application\src\Application\Model\Navigation.php(57): Application\Model\Navigation->getFrontendNavigationLoop(5, 0, -1, Array)
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(25): Application\Model\Navigation->getFrontendNavigations(5)
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:36:40+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(52): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:36:44+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(52): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:39:47+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(53): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:40:23+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(48): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:43:14+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(48): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:43:29+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(48): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:43:31+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(48): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:44:09+07:00 ERR (3): error-exception	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36		GET	http://zend2/	Zend\ServiceManager\ServiceManager::get was unable to fetch or create an instance for FrontendModelGateway
+#0 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\IndexController.php(22): Zend\ServiceManager\ServiceManager->get('FrontendModelGa...')
+#1 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractActionController.php(82): Frontend\Controller\IndexController->indexAction()
+#2 E:\Xampp\htdocs\zend2\module\Frontend\src\Frontend\Controller\MasterController.php(48): Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#3 [internal function]: Frontend\Controller\MasterController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#4 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#6 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Controller\AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#8 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#9 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#10 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\EventManager\EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#11 E:\Xampp\htdocs\zend2\vendor\zendframework\zendframework\library\Zend\Mvc\Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 E:\Xampp\htdocs\zend2\public\index.php(24): Zend\Mvc\Application->run()
+#13 {main}
+2018-05-24T21:44:20+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/group-navigation	GET	http://zend2/admin/images/favicon.ico
+2018-05-24T21:44:21+07:00 ERR (3): error-router-no-match	127.0.0.1	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36	http://zend2/admin/navigation/index?group_navigation_id=5	GET	http://zend2/admin/navigation/images/favicon.ico

@@ -1,0 +1,48 @@
+<div class="pagehding-sec" style='background-image: url("<?php echo $this->basePath('pictures/templates/' . $template[36]['template_picture']);?>")'>
+    <div class="pagehding-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-heading">
+                    <h1><?php echo $this->escapeHtml($postCategory['category_name_' . $lang]);?></h1>
+                    <?php echo $crum;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-sec pt-100 pb-80">
+    <div class="container">
+        <div class="row">
+
+            <?php foreach ($posts as $v) {
+                $newsUrl = $this->url('home-news-detail', array('name' => $this->function()->formatTitle($v['post_title_' . $lang]), 'id' => $v['post_id']));
+                ?>
+            <div class="col-md-4 col-sm-6">
+                <div class="media">
+                    <div class="single-post">
+                        <div class="blog-thumb">
+                            <img src="<?php echo $this->basePath('pictures/posts/' . $v['post_picture']);?>" alt="">
+                            <a href="<?php echo $newsUrl;?>"><?php echo $this->translate('see more');?></a>
+                        </div>
+                        <div class="media-body">
+                            <div class="single-post-desc">
+                                <h2><a href="<?php echo $newsUrl;?>"><?php echo $this->escapeHtml($v['post_title_' . $lang]);?></a></h2>
+                                <?php echo $v['post_quote_' . $lang];?>
+                                <div class="post-date">
+                                    <ul>
+                                        <li><a href="<?php echo $newsUrl;?>"><i class="fa fa-pencil"></i><?php echo $this->translate('detail');?></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php }?>
+
+        </div>
+        <?php echo $this->paginationControl($paging, 'sliding', 'frontend/partial/paginator', array('url' => $this->url('home-news-category', array('name' => $name, 'id' => $id)))); ?>
+    </div>
+</div>

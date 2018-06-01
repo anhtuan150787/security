@@ -1,0 +1,96 @@
+<div class="x_panel">
+    <?php echo $this->partial('admin/partial/form_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+    <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+    <div class="x_content">
+        <?php
+        $form->setAttributes(['action' => '', 'class' => 'form-horizontal form-label-left', 'id' => 'frm', 'novalidate' => '']);
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        ?>
+        <div class="" role="tabpanel" data-example-id="togglable-tabs">
+            <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Quyền</a>
+                </li>
+                <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Menu</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+                    <table id="dataTable" class="table table-bordered table-condensed table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th style="text-align: center"><input type="checkbox" class="checkbox-all-privilege" /></th>
+                            <th>Quyền</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($acls as $rp) : ?>
+                            <tr>
+                                <td width="60" style="text-align: center">
+                                    <?php if ($rp['acl_parent'] != 0) {?>
+                                        <input class="checkbox-item-privilege" type="checkbox" name="acl[<?php echo $rp['acl_id']; ?>]" value="1"
+                                            <?php echo (array_key_exists($rp['acl_id'], $groupAcls)) ? 'checked="checked"' : '';?> />
+                                    <?php } else {?>
+                                        <input class="checkbox-item-privilege" type="hidden" name="acl[<?php echo $rp['acl_id']; ?>]" value="1" checked="checked" />
+                                    <?php }?>
+                                </td>
+                                <td <?php if ($rp['acl_parent'] == 0) {?> style="font-weight: bold" <?php }?>><?php if ($rp['acl_parent'] != 0) {?>__ <?php }?><?php echo $this->escapeHtml($rp['acl_name']); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+                    <table id="dataTable"
+                           class="table table-bordered table-condensed table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th style="text-align: center"><input type="checkbox" class="checkbox-all-menu" /></th>
+                            <th>Menu</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($menus as $rm) : ?>
+                            <tr>
+                                <td width="60" style="text-align: center"><input class="checkbox-item-menu" type="checkbox" name="menu[<?php echo $rm['menu_id'];?>]" value="1" <?php echo (array_key_exists($rm['menu_id'], $groupMenus)) ? 'checked="checked"' : '';?> /></td>
+                                <td <?php if ($rm['menu_parent'] == 0) {?> style="font-weight: bold" <?php }?>><?php echo str_repeat('__', $rm['menu_level']) . ' ' . $this->escapeHtml($rm['menu_name']); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="ln_solid clear"></div>
+
+        <?php echo $this->partial('admin/partial/form_button', ['form' => $form, 'module' => $module]); ?>
+
+        <?php echo $this->form()->closeTag(); ?>
+    </div>
+</div>
+
+<?php $this->inlineScript()->captureStart();?>
+    $(function () {
+        //Check all privilege
+        $(".checkbox-all-privilege").change(function () {
+            var chec = false;
+            if ($(this).is(":checked"))
+            {
+                chec = true;
+            }
+            $(".checkbox-item-privilege").prop('checked', chec);
+        });
+
+        //Check all menu
+        $(".checkbox-all-menu").change(function () {
+            var chec = false;
+            if ($(this).is(":checked"))
+            {
+                chec = true;
+            }
+            $(".checkbox-item-menu").prop('checked', chec);
+        });
+    });
+<?php $this->inlineScript()->captureEnd();?>
+
+

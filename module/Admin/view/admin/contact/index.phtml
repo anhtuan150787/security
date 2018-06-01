@@ -1,0 +1,71 @@
+<style>
+    .panel_toolbox {display: none}
+</style>
+<form name="" id="frm_table" action="<?php echo $this->url('admin/default', ['controller' => $module]); ?>"
+      method="post">
+    <div class="x_panel">
+        <?php echo $this->partial('admin/partial/table_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+        <div class="x_content">
+            <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+            <div class="table-responsive">
+                <div class="table-responsive">
+                    <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                        <tr class="headings">
+                            <th><input type="checkbox" id="check-all" class="checkbox_all"></th>
+                            <th class="column-title">Tên</th>
+                            <th class="column-title">Email</th>
+                            <th class="column-title">Điện thoại</th>
+                            <th class="column-title">Ngày</th>
+                            <th class="column-title">Trạng thái</th>
+                            <th class="column-title">Chức năng</th>
+                            <th id="bulk_delete_items" colspan="7">
+                                <button type="button" class="btn btn-warning btn-xs no_margin_bottom" id="btn_delete_items">
+                                    Xóa đã chọn
+                                </button>
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php foreach ($records as $record) { ?>
+                            <tr class="even pointer" style="<?php echo ($record['contact_status'] == 0) ? 'background: rgba(38, 185, 154, .07);' : '';?>">
+                                <td class="a-center ">
+                                    <input type="checkbox" class="checkbox_item" name="check_item[]"
+                                           value="<?php echo $record['contact_id']; ?>">
+                                </td>
+                                <td>
+                                    <?php echo '<a href="' . $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['contact_id']))) . '"> <strong>' . $this->escapeHtml($record['contact_fullname']) . '</strong>' . '</a>'; ?></td>
+                                <td>
+                                    <?php echo '<a href="' . $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['contact_id']))) . '"> <strong>' . $this->escapeHtml($record['contact_email']) . '</strong>' . '</a>'; ?></td>
+                                </td>
+                                <td>
+                                    <?php echo $this->escapeHtml($record['contact_phone']); ?></td>
+                                </td>
+                                <td>
+                                    <?php echo $this->date()->dateTimeFormat($record['contact_date']); ?></td>
+                                </td>
+                                <td>
+                                    <?php echo $status[$record['contact_status']]; ?>
+                                </td>
+                                <td>
+                                    <a href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['contact_id']))); ?>"
+                                       class="btn btn-info btn-xs btn-edit"><i class="icon-eye-open"></i> Xem nội dung </a>
+
+                                    <a href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'delete'), array('query' => array('id' => $record['contact_id']))); ?>"
+                                       onclick="confirmDelete('deleteItem', this)" class="btn btn-danger btn-xs"><i
+                                            class="fa fa-trash-o"></i> Xóa </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <?php echo $this->paginationControl($paging, 'sliding', 'admin/partial/paginator', array('url' => $this->url('admin/default', ['controller' => $module, 'action' => 'index']))); ?>
+        </div>
+</form>

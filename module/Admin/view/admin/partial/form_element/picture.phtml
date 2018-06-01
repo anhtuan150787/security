@@ -1,0 +1,38 @@
+<div class="form-group">
+    <?php echo $this->formLabel($formElement); ?>
+    <div class="col-md-5 col-sm-5 col-xs-12 item">
+        <?php echo $this->formElement($formElement); ?>
+    </div>
+
+    <?php if (!empty($params['pictureValue'])) { ?>
+        <div class="col-md-1 col-sm-1 col-xs-12 item">
+            <img title="Click để xóa" class="img-rounded form-users-img" id="picture" onclick="deletePicture(<?php echo $params['recordId']; ?>)"
+                 style="cursor: pointer"
+                 src="<?php echo $this->serverUrl() . '/thumbs/timthumb.php?src=' . $this->basePath($params['pictureUrl'] . $params['pictureValue']) . '&w=50px&h=50px'; ?>"/>
+        </div>
+    <?php } ?>
+
+</div>
+
+<?php $this->inlineScript()->captureStart();?>
+function deleteURL() {
+$('input[type="file"]').val('');
+$('.picture_upload_view').attr('src', no_image);
+}
+
+function deletePicture(id) {
+if (confirm('Bạn có muốn xóa?')) {
+$.ajax({
+url: '<?php echo $params['pictureDelUrl'];?>',
+type: 'post',
+data: {id: id},
+success: function (response) {
+data = jQuery.parseJSON(response);
+if (data.return == 1) {
+$('#picture').remove();
+}
+}
+});
+}
+}
+<?php $this->inlineScript()->captureEnd();?>

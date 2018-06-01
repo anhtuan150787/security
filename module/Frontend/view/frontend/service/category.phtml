@@ -1,0 +1,38 @@
+<div class="pagehding-sec" style='background-image: url("<?php echo $this->basePath('pictures/templates/' . $template[36]['template_picture']);?>")'>
+    <div class="pagehding-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-heading">
+                    <h1><?php echo $this->escapeHtml($postCategory['category_name_' . $lang]);?></h1>
+                    <?php echo $crum;?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blog-sec pt-100 pb-80">
+    <div class="container">
+        <div class="row">
+
+            <?php foreach ($posts as $v) {
+                $newsUrl = $this->url('home-service-detail', array('name' => $this->function()->formatTitle($v['post_title_' . $lang]), 'id' => $v['post_id']));
+                ?>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-inner">
+                        <div class="service-img" style="background-image: url('<?php echo $this->basePath('pictures/posts/' . $v['post_picture']);?>'); background-size: cover; background-position: center center;">
+                        </div>
+                        <div class="service-details">
+                            <h2><a href="<?php echo $newsUrl;?>"><?php echo $this->escapeHtml($v['post_title_' . $lang]);?></a></h2>
+                            <?php echo $v['post_quote_' . $lang];?>
+                        </div>
+                    </div>
+                </div>
+
+            <?php }?>
+
+        </div>
+        <?php echo $this->paginationControl($paging, 'sliding', 'frontend/partial/paginator', array('url' => $this->url('home-news-category', array('name' => $name, 'id' => $id)))); ?>
+    </div>
+</div>

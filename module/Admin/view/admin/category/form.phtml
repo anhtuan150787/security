@@ -1,0 +1,45 @@
+<div class="x_panel">
+    <?php echo $this->partial('admin/partial/form_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+    <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+    <div class="x_content">
+
+        <?php
+        $form->setAttributes(['action' => '', 'class' => 'form-horizontal form-label-left', 'id' => 'frm', 'novalidate' => '']);
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        ?>
+
+        <?php echo $this->partial('admin/partial/language'); ?>
+
+        <?php echo $this->formViewElement($form->get('category_name_vn'), null, ['formGroupClass' => 'field-vn']);?>
+        <?php echo $this->formViewElement($form->get('category_name_en'), null, ['formGroupClass' => 'field-en']);?>
+
+        <?php if ($module == 'service-category'){?>
+
+            <?php echo $this->formViewElement($form->get('category_picture'), 'picture', [
+                'pictureValue' => $record['category_picture'],
+                'recordId' => $record['category_id'],
+                'pictureUrl' => 'public/pictures/categories/',
+                'pictureDelUrl' => $this->url('admin/default', array('controller' => $module, 'action' => 'delete-picture')),
+            ]);?>
+
+            <?php echo $this->formViewElement($form->get('category_description_vn'), null, ['formGroupClass' => 'field-vn']);?>
+            <?php echo $this->formViewElement($form->get('category_description_en'), null, ['formGroupClass' => 'field-en']);?>
+
+        <?php }?>
+
+        <?php echo $this->formViewElement($form->get('category_parent'));?>
+        <?php echo $this->formViewElement($form->get('category_status'));?>
+
+        <div class="ln_solid clear"></div>
+
+        <?php echo $this->partial('admin/partial/form_button', ['form' => $form, 'module' => $module]); ?>
+
+        <?php echo $this->form()->closeTag(); ?>
+
+    </div>
+</div>
+
+
+
+

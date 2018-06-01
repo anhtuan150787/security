@@ -1,0 +1,25 @@
+<div class="x_panel">
+    <?php echo $this->partial('admin/partial/form_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+    <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+    <div class="x_content">
+        <?php
+        $form->setAttributes(['action' => '', 'class' => 'form-horizontal form-label-left', 'id' => 'frm', 'novalidate' => '']);
+        $form->prepare();
+        echo $this->form()->openTag($form);
+        ?>
+
+        <?php echo $this->formViewElement($form->get('group_navigation_name'));?>
+        <?php echo $this->formViewElement($form->get('group_navigation_status'));?>
+
+        <div class="ln_solid clear"></div>
+
+        <?php echo $this->partial('admin/partial/form_button', ['form' => $form, 'module' => $module]); ?>
+
+        <?php echo $this->form()->closeTag(); ?>
+
+    </div>
+</div>
+
+
+
+

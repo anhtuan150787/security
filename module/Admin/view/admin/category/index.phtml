@@ -1,0 +1,56 @@
+
+<form name="" id="frm_table" action="<?php echo $this->url('admin/default', ['controller' => $module]); ?>"
+      method="post">
+    <div class="x_panel">
+        <?php echo $this->partial('admin/partial/table_title', ['moduleName' => $moduleName, 'module' => $module]); ?>
+        <div class="x_content">
+            <?php echo $this->partial('admin/partial/message', ['msgError' => $msgError, 'msgSuccess' => $msgSuccess]); ?>
+            <div class="table-responsive">
+                <div class="table-responsive">
+                    <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                        <tr class="headings">
+                            <th><input type="checkbox" id="check-all" class="checkbox_all"></th>
+                            <th class="column-title">Danh mục (VN)</th>
+                            <th class="column-title">Danh mục (EN)</th>
+                            <th class="column-title">Trạng thái</th>
+                            <th class="column-title">Chức năng</th>
+                            <th id="bulk_delete_items" colspan="7">
+                                <button type="button" class="btn btn-warning btn-xs no_margin_bottom" id="btn_delete_items">
+                                    Xóa đã chọn
+                                </button>
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <?php foreach ($records as $record) { ?>
+                            <tr class="even pointer">
+                                <td class="a-center ">
+                                    <input type="checkbox" class="checkbox_item" name="check_item[]"
+                                           value="<?php echo $record['category_id']; ?>">
+                                </td>
+                                <td>
+                                    <?php echo '<a href="' . $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['category_id']))) . '">' . str_repeat('__', $record['category_level']) . ' <strong>' . $this->escapeHtml($record['category_name_vn']) . '</strong>' . '</a>'; ?></td>
+                                <td>
+                                    <?php echo '<a href="' . $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['category_id']))) . '">' . str_repeat('__', $record['category_level']) . ' <strong>' . $this->escapeHtml($record['category_name_en']) . '</strong>' . '</a>'; ?></td>
+                                <td>
+                                    <?php echo $status[$record['category_status']]; ?>
+                                </td>
+                                <td>
+                                    <a href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'edit'), array('query' => array('id' => $record['category_id']))); ?>"
+                                       class="btn btn-info btn-xs btn-edit"><i class="fa fa-pencil"></i> Cập nhật </a>
+
+                                    <a href="<?php echo $this->url('admin/default', array('controller' => $module, 'action' => 'delete'), array('query' => array('id' => $record['category_id']))); ?>"
+                                       onclick="confirmDelete('deleteItem', this)" class="btn btn-danger btn-xs"><i
+                                            class="fa fa-trash-o"></i> Xóa </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</form>
