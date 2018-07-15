@@ -296,7 +296,8 @@
                 external_filemanager_path: tinymce_filemanager_path,
                 filemanager_title: "Responsive Filemanager",
                 external_plugins: {"filemanager": tinymce_filemanager_path + "plugin.min.js"},
-                filemanager_access_key: '<?php echo sha1(md5(strtotime(date('Y-m-d'))));?>'
+                filemanager_access_key: '<?php echo sha1(md5(strtotime(date('Y-m-d'))));?>',
+                forced_root_block : 0
             });
         }
     });

@@ -2,5 +2,5 @@ div.captcha img {float: right; cursor: pointer;}
 input.captcha-input {width: 160px !important;}
 div.captcha ul {display: none}
 
-.login_form .form-group .item {position: relative}
-.login_form .form-group .item .alert{position: absolute !important; top: 0; left: 310px;}
+.login_form .form-group.item {position: relative}
+.login_form .form-group.item .alert{position: absolute !important; top: 0; left: 310px;}

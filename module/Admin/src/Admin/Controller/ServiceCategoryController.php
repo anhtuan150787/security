@@ -133,6 +133,11 @@ class ServiceCategoryController extends MainController
 
         if (is_array($id)) {
             foreach($id as $k => $v) {
+
+                $record = $this->model->fetchPrimary($v);
+
+                unlink($this->uploadPath . '/' . $record['category_picture']);
+
                 $this->model->deletePrimary($v);
             }
         }

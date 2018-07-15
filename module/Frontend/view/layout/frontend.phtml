@@ -23,7 +23,7 @@
         ->prependStylesheet($this->basePath('css/owl.carousel.min.css'))
         ->prependStylesheet($this->basePath('css/font-awesome.min.css'))
         ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
-        ->prependStylesheet($this->basePath('css/css'));
+        ->prependStylesheet($this->basePath('css/css.css'));
     ?>
 
 </head>
@@ -46,7 +46,8 @@
                             <ul>
                                 <li><i class="fa fa-phone"></i>+84 937 266 388 / +84 933 885 828</li>
                                 <li><i class="glyphicon glyphicon-globe"></i>
-                                    <?php if (isset($_GET['lang']) && $_GET['lang'] == 'vi_VN') {
+                                    <?php
+                                    if ($lang == 'vn') {
                                         echo '<a href="' . $this->serverUrl(true) . '?&lang=en_US">EN</a>';
                                     } else {
                                         echo '<a href="' . $this->serverUrl(true) . '?&lang=vi_VN">VN</a>';
@@ -159,7 +160,7 @@
                                         }
                                     } ?>
                                     <?php if ($sub == false) {?>
-                            <li><a href="<?php echo $v['navigation_url_name'];?> ?>"><?php echo $this->escapeHtml($v['navigation_name_' . $lang]); ?></a></li>
+                            <li><a href="<?php echo $v['navigation_url_name'];?>"><?php echo $this->escapeHtml($v['navigation_name_' . $lang]); ?></a></li>
                                     <?php }?>
                                 <?php endif; ?>
                             <?php endforeach; ?>

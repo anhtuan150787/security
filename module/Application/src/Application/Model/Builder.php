@@ -171,4 +171,25 @@ class Builder {
         $this->tableGateway->delete($where);
     }
 
+    public function countAll() {
+        $sql = $this->getSql([
+            'COLUMNS' => 'count(' . $this->primary . ') as total',
+        ]);
+        $row = $this->getRow($sql);
+
+        return $row['total'];
+    }
+
+    public function countWhere($options) {
+
+        $options = array_merge([
+            'COLUMNS' => 'count(' . $this->primary . ') as total',
+        ], $options);
+
+        $sql = $this->getSql($options);
+        $row = $this->getRow($sql);
+
+        return $row['total'];
+    }
+
 }

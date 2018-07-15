@@ -1,14 +1,12 @@
 <div class="slider index2">
-    <div class="all-slide owl-item owl-carousel owl-theme owl-loaded owl-text-select-on">
+    <div class="all-slide owl-carousel owl-theme owl-loaded owl-text-select-on">
         <?php foreach ($bannerSlide as $v) {?>
-        <div class="owl-item cloned" style="width: 1903px; margin-right: 0px;"><div class="single-slide" style="background-image:url(<?php echo $this->basePath('pictures/templates/' . $v['template_picture']);?>);">
+        <div class="owl-item" style="width: 100%"><div class="single-slide" style="background-image:url(<?php echo $this->basePath('pictures/templates/' . $v['template_picture']);?>);">
                 <div class="slider-overlay"></div>
                 <div class="slider-text">
                     <div class="slider-wraper">
-                        <h1 class="animated fadeInLeft" style="opacity: 1;"><?php echo $v['template_title_' . $lang]; ?></h1>
-                        <p class="animated fadeInDown" style="opacity: 1;">
-                            <?php echo $v['template_content_' . $lang]; ?>
-                        </p>
+                        <h1><?php echo $v['template_title_' . $lang]; ?></h1>
+                        <?php echo $v['template_content_' . $lang]; ?>
                         <ul>
                             <li><a href="<?php echo $this->url('home-lien-he');?>" class="animated fadeInUp" style="opacity: 1;"><?php echo $this->translate('contact');?></a></li>
                         </ul>

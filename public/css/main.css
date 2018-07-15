@@ -513,6 +513,7 @@ transition: all 0.4s ease 0s;
 }
 .all-slide .owl-item {
   height: 650px;
+	width: 100%;
 }
 .all-slide .single-slide {
 background-position: center center;
